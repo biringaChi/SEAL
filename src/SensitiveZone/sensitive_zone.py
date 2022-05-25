@@ -1,5 +1,4 @@
 import os
-# import pandas as pd
 from sqlite3 import connect
 from typing import List, Tuple
 from contextlib import contextmanager
@@ -21,6 +20,9 @@ int | text  | text      |
 """
 
 class College:
+	"""
+	The moodule defines the data we want to protect against injection attacks.
+	"""
 	college = "./db/college.db"
 
 	def __str__(self) -> str:
@@ -105,6 +107,9 @@ class DBManager(College):
 
 	def __repr__(self) -> str:
 		return self.__str__()
+	
+	def create(self):
+		pass
 
 	def query(self) -> List[Tuple]:
 		with connect(self.college) as conn:
@@ -116,7 +121,7 @@ class DBManager(College):
 			for row in conn.cursor().execute(f"SELECT * FROM {table}"):
 				print(row)
 
-	def has_entergrades_secure(self, username):
+	def has_entergrades_secure(self, username) -> bool:
 		with connect(self.college) as conn:
 			cur = conn.cursor()
 			cur.execute("SELECT Trust FROM users WHERE username = ?", (username,))

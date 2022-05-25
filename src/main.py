@@ -1,6 +1,11 @@
+"""
+* Author: Chidera Biringa
+* Github: biringaChi
+"""
+
 import sys
 sys.path.append(".")
-from src.InjectionZone.ui import UI
+from InjectionZone.injection_zone import InjectionZone
 
 if __name__ == "__main__":
-	UI().main()
+	InjectionZone().main()

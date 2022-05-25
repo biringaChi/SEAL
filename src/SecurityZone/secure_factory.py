@@ -4,7 +4,8 @@ from src.SecurityZone.secure_strategy import UpdateBased, ErrorBased
 
 class SecureFactory:
 	"""
-	Defines the creation of security strategies implemented by Factory concrete class.
+	This module defines an interface for creating secure strategies implemented using the 
+	UpdateFactory and ErrorFactory classes to create concrete UPDATE and ERROR security strategies.
 	"""
 	def __init__(self) -> None:
 		super().__init__()
@@ -13,21 +14,15 @@ class SecureFactory:
 		pass
 
 class UpdateFactory(SecureFactory):
-	"""
-	Implementing factory class for ...
-	"""
 	def retrieve_strategy(self):
 		print("Retrieving UPDATE factory")
 		return UpdateBased()
 
 class ErrorFactory(SecureFactory):
-	"""
-	Implementing factory class for ....
-	"""
 	def retrieve_strategy(self):
 		print("Retrieving ERROR factory")
 		return ErrorBased()
 	
 class FactoryHandler:
-	def handle(self, Factory) -> None:
+	def handle(self, Factory):
 		return Factory.retrieve_strategy(self)

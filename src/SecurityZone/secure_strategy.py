@@ -1,10 +1,12 @@
 import sys
 sys.path.append(".")
-from src.SensitiveZone.college import DBManager
+from SensitiveZone.sensitive_zone import DBManager
 
 class SecureInbandSelection:
 	"""
-	Defines a collection of “secure algorithms” implemented by concrete strategies
+	This module defines the dynamic selection of implemented secure mitigation 
+	algorithms. It processes requests from the SQLiContext and passes that information 
+	to the derived concrete classes base on a detected threat.
 	"""
 
 	def update(self, payload: str) -> None:
@@ -14,21 +16,15 @@ class SecureInbandSelection:
 		pass
 
 class UpdateBased(SecureInbandSelection):
-	"""
-	This modules validates input for SQLI injection 
-	"""
-	def update(self, payload: str) -> None:
+	def update(self, payload: str):
 		return DBManager().has_entergrades_secure(payload)
 	
-	def error(self, payload: str) -> None:
+	def error(self, payload: str):
 		pass
 
 class ErrorBased(SecureInbandSelection):
-	"""
-	This module validates input for Code injection
-	"""
-	def update(self, injected_input: str) -> None:
+	def update(self, injected_input: str):
 		pass
 	
-	def error(self, payload: str) -> None:
+	def error(self, payload: str):
 		return DBManager().has_entergrades_secure(payload)

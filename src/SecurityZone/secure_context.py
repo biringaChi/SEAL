@@ -1,4 +1,8 @@
 class SQLiContext:
+	"""
+	This module defines the mitigation logic encapsulated by the InbandSelection interface class and dynamically 
+	implemented by concrete UpdateBased and ErrorBased secure mitigation strategies to mitigate SQLi attacks
+	"""
 	def __init__(self, secure_strategy) -> None:
 		self.secure_strategy = secure_strategy
 	
