@@ -1,8 +1,3 @@
-"""
-* Author: Chidera Biringa
-* Github: biringaChi
-"""
-
 import sys
 sys.path.append(".")
 from InjectionZone.injection_zone import InjectionZone

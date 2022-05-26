@@ -8,7 +8,7 @@ Users Table
 --------------------------------------------
 ID  | Username | Student | Faculty | Trust |
 ++++++++++++++++++++++++++++++++++++++++++++
-int | text     | text    | text    | text  |
+int | text     | bool    | bool    | text  |
 --------------------------------------------
 
 Authorization Table

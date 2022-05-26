@@ -1,8 +1,9 @@
+import os
 import sys
 sys.path.append(".")
 import tkinter as tk
-from tkinter import ttk
 import tkinter.messagebox
+from tkinter import PhotoImage, ttk
 from src.delegator import Delegator
 
 class InjectionZone:
@@ -15,7 +16,6 @@ class InjectionZone:
 		self.sqli_vector = None
 
 	def on_click(self) -> str:
-		# reduce the height, width, color and text of messagebox
 		result = Delegator.delegate(self.sqli_vector.get())
 		match result:
 			case True:
@@ -29,14 +29,14 @@ class InjectionZone:
 		bg_colour = "#0D1319"
 		font_colour = "#FFFFFF"
 		font_type = "Consolas"
-
-		title = "Secure-Behavioral Design for Delegating Lateral \n In-band SQLi Attack Security Strategies \n\n\n"
+		title = "Secure-Behavioral Design for Run-time \n  Delegation of Lateral-SQLi Attack Secure Strategies \n\n\n"
 		root = tk.Tk(className = " ")
 		root["background"] = bg_colour
-		root.geometry("600x400")
+		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/musi.png"))
+		root.geometry("500x410")
 
-		tk.Label(text = "\u03BCSI", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
-		ttk.Separator(orient = "horizontal",  style='red.TSeparator').pack(fill = "x")
+		tk.Label(text = "MuSI", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
+		ttk.Separator(orient = "horizontal",  style = "TSeparator").pack(fill = "x")
 		tk.Label(text = title, bg = bg_colour, font = (f"{font_type} italic", 12), fg = font_colour).pack()
 		tk.Label(text = "In-band SQLi Payload", bg = bg_colour, font = (font_type, 11), fg = font_colour).pack()
 		tk.Label(text = "(Faculty Privilege Feature)", bg = bg_colour, font = (font_type, 9), fg = font_colour).pack()
