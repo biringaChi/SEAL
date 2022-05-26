@@ -1,4 +1,4 @@
-MuSI &mdash; Secure-Behavioral Design for Run-time Delegation of Lateral Injection Attack Security Strategies.
+**MuSI** &mdash; Secure-Behavioral Design for Run-time Delegation of Lateral Injection Attack Security Strategies.
 
 Description: A Secure-Behavioral design that extrapolates architectural, design, and implementation levels of abstraction to dynamically encapsulate and delegate lateral injection attack security strategies during software run-time.
 

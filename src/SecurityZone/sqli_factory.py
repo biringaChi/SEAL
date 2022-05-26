@@ -1,6 +1,6 @@
 import sys
 sys.path.append(".")
-from src.SecurityZone.secure_strategy import UpdateBased, ErrorBased
+from SecurityZone.inband_selection import UpdateBased, ErrorBased
 
 class SecureFactory:
 	"""
