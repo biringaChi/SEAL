@@ -10,9 +10,15 @@ class Delegator:
 	"""
 	This module defines the delegation of security strategies.
 	"""
-	def delegate(input):
+	def __str__(self) -> str:
+		return self.__class__.__name__
+
+	def __repr__(self) -> str:
+		return self.__str__()
+
+	def delegate(input: str):
 		payload = InputValidation().validate(input)
-		if len(payload) >= 5:
+		if len(payload) >= 7:
 			update_threat = ThreatHandler(payload).handle(UpdateThreat)
 			factory = FactoryHandler().handle(UpdateFactory)
 			out =  SQLiContext(factory).delegate_update_strategy(payload)

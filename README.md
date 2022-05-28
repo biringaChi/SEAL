@@ -8,18 +8,29 @@ $ pip install -r requirements.txt
 $ git clone https://github.com/biringaChi/MuSI
 ```
 
-Running $\mu$*SI*:
+Running **MuSI**:
 ```
 $ cd src
 $ python main.py
 ```
+Cases: Enter *input* below in the *entry field* and click *inject*
 
-Case 1: Enter payload below in the *entry field* and click *inject*
+Case 1:
+```
+User1
+``` 
+
+Case 2:
+```
+User2
+``` 
+
+Case 3:
 ```
 '; UPDATE users SET Trust = 'T2' WHERE Username = 'User1'; SELECT 1; --
 ``` 
 
-Case 2: Enter payload below in the *entry field* and click *inject*
+Case 4:
 ```
 User3
 ``` 

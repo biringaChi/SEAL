@@ -9,13 +9,25 @@ class SecureInbandSelection:
 	to the derived concrete classes base on a detected threat.
 	"""
 
-	def update(self, payload: str) -> None:
+	def __str__(self) -> str:
+		return self.__class__.__name__
+
+	def __repr__(self) -> str:
+		return self.__str__()
+
+	def update(self, payload: str):
 		pass
 
-	def error(self, payload: str) -> None:
+	def error(self, payload: str):
 		pass
 
 class UpdateBased(SecureInbandSelection):
+	def __str__(self) -> str:
+		return self.__class__.__name__
+
+	def __repr__(self) -> str:
+		return self.__str__()
+		
 	def update(self, payload: str):
 		return DBManager().has_entergrades_secure(payload)
 	
@@ -23,8 +35,14 @@ class UpdateBased(SecureInbandSelection):
 		pass
 
 class ErrorBased(SecureInbandSelection):
+	def __str__(self) -> str:
+		return self.__class__.__name__
+
+	def __repr__(self) -> str:
+		return self.__str__()
+		
 	def update(self, injected_input: str):
 		pass
 	
 	def error(self, payload: str):
-		return DBManager().has_entergrades_secure(payload)
+		return DBManager().has_entergrades_secure1(payload)

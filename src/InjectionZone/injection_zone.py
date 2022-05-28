@@ -12,8 +12,14 @@ class InjectionZone:
 	communication medium and a single access injection point for an 
 	adversary to insert an attack vector or a collection of attack vectors.
 	"""
-	def __init__(self) -> None:
+	def __init__(self):
 		self.sqli_vector = None
+
+	def __str__(self) -> str:
+		return self.__class__.__name__
+
+	def __repr__(self) -> str:
+		return self.__str__()
 
 	def on_click(self) -> str:
 		result = Delegator.delegate(self.sqli_vector.get())
@@ -22,14 +28,16 @@ class InjectionZone:
 				tkinter.messagebox.showinfo(message = "User has faculty privileges")
 			case False:
 				tkinter.messagebox.showinfo(message = "User doesn't have faculty privileges")
-			case _:
+			case None:
 				tkinter.messagebox.showinfo(message = "Something went wrong")
+			case _:
+				tkinter.messagebox.showinfo(message = "User doesn't exist")
 
 	def main(self):
 		bg_colour = "#0D1319"
 		font_colour = "#FFFFFF"
 		font_type = "Consolas"
-		title = "Secure-Behavioral Design for Run-time \n  Delegation of Lateral-SQLi Attack Secure Strategies \n\n\n"
+		title = "Secure-Behavioral Design for Run-time \n Delegation of Lateral-SQLi Attack Secure Strategies \n\n\n"
 		root = tk.Tk(className = " ")
 		root["background"] = bg_colour
 		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/musi.png"))

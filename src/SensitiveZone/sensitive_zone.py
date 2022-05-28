@@ -1,6 +1,6 @@
 import os
 from sqlite3 import connect
-from typing import List, Tuple
+from typing import List, Tuple, Union
 from contextlib import contextmanager
 
 """
@@ -122,6 +122,15 @@ class DBManager(College):
 				print(row)
 
 	def has_entergrades_secure(self, username) -> bool:
+		with connect(self.college) as conn:
+			cur = conn.cursor()
+			cur.execute("SELECT Trust FROM users WHERE username = ?", (username,))
+			trust_level = cur.fetchone()
+		if trust_level is None:
+			return ValueError("User doesn't exist!").__repr__()
+		return True if trust_level[0] == "T2" else False
+
+	def has_entergrades_secure1(self, username) -> Union[None, bool]:
 		with connect(self.college) as conn:
 			cur = conn.cursor()
 			cur.execute("SELECT Trust FROM users WHERE username = ?", (username,))
