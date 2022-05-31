@@ -1,10 +1,10 @@
 import sys
 sys.path.append(".")
 
-from SecurityZone.sqli_context import SQLiContext
+from SecurityZone.context import SQLiContext
 from src.SecurityZone.input_validation import InputValidation
 from src.SecurityZone.threat_detector import ThreatHandler, UpdateThreat, ErrorThreat
-from SecurityZone.sqli_factory import FactoryHandler, UpdateFactory, ErrorFactory
+from SecurityZone.factory import FactoryHandler, UpdateFactory, ErrorFactory
 
 class Delegator:
 	"""
