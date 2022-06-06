@@ -40,10 +40,10 @@ class InjectionZone:
 		title = "Secure-Behavioral Design for Run-time \n Delegation of Lateral-SQLi Attack Secure Strategies \n\n\n"
 		root = tk.Tk(className = " ")
 		root["background"] = bg_colour
-		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/musi.png"))
+		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/bisi.png"))
 		root.geometry("500x410")
 
-		tk.Label(text = "MuSI", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
+		tk.Label(text = "BISI", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
 		ttk.Separator(orient = "horizontal",  style = "TSeparator").pack(fill = "x")
 		tk.Label(text = title, bg = bg_colour, font = (f"{font_type} italic", 12), fg = font_colour).pack()
 		tk.Label(text = "In-band SQLi Payload", bg = bg_colour, font = (font_type, 11), fg = font_colour).pack()

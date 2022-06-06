@@ -1,11 +1,10 @@
 import sys
 sys.path.append(".")
 
-from SecurityZone.context import SQLiContext
+from src.SecurityZone.context import SQLiContext
 from src.SecurityZone.input_validation import InputValidation
 from src.SecurityZone.threat_detector import ThreatHandler, UpdateThreat, ErrorThreat
-from SecurityZone.factory import FactoryHandler, UpdateFactory, ErrorFactory
-
+from src.SecurityZone.factory import FactoryHandler, UpdateFactory, ErrorFactory
 class Delegator:
 	"""
 	This module defines the delegation of security strategies.

@@ -15,5 +15,5 @@ class InputValidation:
 	def __repr__(self) -> str:
 		return self.__str__()
 	
-	def validate(self, payload) -> Union[str, bool]: 
+	def validate(self, payload: str) -> Union[str, bool]: 
 		return payload if isinstance(payload, str) else False
