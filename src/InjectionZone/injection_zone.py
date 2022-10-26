@@ -37,15 +37,15 @@ class InjectionZone:
 		bg_colour = "#0D1319"
 		font_colour = "#FFFFFF"
 		font_type = "Consolas"
-		title = "Secure-Behavioral Design for Run-time \n Delegation of Lateral-SQLi Attack Secure Strategies \n\n\n"
+		title = "Secure Design Pattern Approach \n Towards Tackling Lateral-Injection Attacks \n\n\n"
 		root = tk.Tk(className = " ")
 		root["background"] = bg_colour
-		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/bisi.png"))
+		root.iconphoto(False, PhotoImage(file = os.getcwd() + "/src/InjectionZone/SEAL.png"))
 		root.geometry("500x410")
 
-		tk.Label(text = "BISI", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
+		tk.Label(text = "SEAL", bg = bg_colour, font = (f"{font_type} bold", 25), fg = font_colour).pack()
 		ttk.Separator(orient = "horizontal",  style = "TSeparator").pack(fill = "x")
-		tk.Label(text = title, bg = bg_colour, font = (f"{font_type} italic", 12), fg = font_colour).pack()
+		tk.Label(text = title, bg = bg_colour, font = (f"{font_type}", 12), fg = font_colour).pack()
 		tk.Label(text = "In-band SQLi Payload", bg = bg_colour, font = (font_type, 11), fg = font_colour).pack()
 		tk.Label(text = "(Faculty Privilege Feature)", bg = bg_colour, font = (font_type, 9), fg = font_colour).pack()
 
