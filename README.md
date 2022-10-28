@@ -1,8 +1,9 @@
 ### SEAL
-Official Implementation of [A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks](https://arxiv.org/pdf/2210.12877.pdf). The 15th IEEE International Conference on Security of Information and Networks (SIN'22).
+Official Implementation of [A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks](https://arxiv.org/abs/2210.12877). The 15th IEEE International Conference on Security of Information and Networks (SIN'22).
 
 Abstract
-> A Secure-Behavioral design that extrapolates architectural, design, and implementation levels of abstraction to dynamically encapsulate and delegate lateral injection attack security strategies during software run-time.
+> Software weaknesses that create attack surfaces for adversarial exploits, such as lateral SQL injection (LSQLi) attacks, are usually introduced during the design phase of software development. Security design patterns are sometimes applied to tackle these weaknesses. However, due to the stealthy nature of lateral-based attacks, employing traditional security patterns to address these threats is insufficient. Hence, we present SEAL, a secure design that extrapolates architectural, design, and
+implementation abstraction levels to delegate security strategies toward tackling LSQLi attacks. We evaluated SEAL using case study software, where we assumed the role of an adversary and injected several attack vectors tasked with compromising the confidentiality and integrity of its database. Our evaluation of SEAL demonstrated its capacity to address LSQLi attacks.
 
 To cite
 ```
@@ -11,7 +12,8 @@ To cite
 }
 ```
 
-Disclaimer: Attack vectors employed in this work are strictly for educational and research purposes. Ergo, don't be a dick.
+Disclaimer
+> Lateral-Injection attack strategies employed in this work are strictly for research purposes.
 
 Installation
 ```
@@ -19,7 +21,7 @@ $ pip install -r requirements.txt
 $ git clone https://github.com/biringaChi/SEAL
 ```
 
-Running **SEAL**:
+Running **SEAL**
 ```
 $ cd src
 $ python main.py
@@ -45,12 +47,6 @@ Case 4
 ```
 User3
 ``` 
-
-To cite
-
-```
-@inproceedings{coming soon...}
-```
 
 LICENSE:
 [GNU GENERAL PUBLIC LICENSE](./LICENSE).

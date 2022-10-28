@@ -15,9 +15,9 @@ class Delegator:
 	def __repr__(self) -> str:
 		return self.__str__()
 
-	def delegate(input: str):
+	def delegate(input: str, demo: int = 7):
 		payload = InputValidation().validate(input)
-		if len(payload) >= 7:
+		if len(payload) >= demo:
 			update_threat = ThreatHandler(payload).handle(UpdateThreat)
 			factory = FactoryHandler().handle(UpdateFactory)
 			out =  SQLiContext(factory).delegate_update_strategy(payload)
