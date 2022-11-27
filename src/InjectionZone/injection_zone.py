@@ -34,9 +34,7 @@ class InjectionZone:
 				tkinter.messagebox.showinfo(message = "User doesn't exist")
 
 	def main(self):
-		bg_colour = "#0D1319"
-		font_colour = "#FFFFFF"
-		font_type = "Consolas"
+		bg_colour, font_colour, font_type = "#0D1319", "#FFFFFF", "Consolas"
 		title = "Secure Design Pattern Approach \n Towards Tackling Lateral-Injection Attacks \n\n\n"
 		root = tk.Tk(className = " ")
 		root["background"] = bg_colour

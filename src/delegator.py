@@ -5,6 +5,7 @@ from src.SecurityZone.context import SQLiContext
 from src.SecurityZone.input_validation import InputValidation
 from src.SecurityZone.threat_detector import ThreatHandler, UpdateThreat, ErrorThreat
 from src.SecurityZone.factory import FactoryHandler, UpdateFactory, ErrorFactory
+
 class Delegator:
 	"""
 	This module defines the delegation of security strategies.
@@ -17,6 +18,7 @@ class Delegator:
 
 	def delegate(input: str, demo: int = 7):
 		payload = InputValidation().validate(input)
+		
 		if len(payload) >= demo:
 			update_threat = ThreatHandler(payload).handle(UpdateThreat)
 			factory = FactoryHandler().handle(UpdateFactory)

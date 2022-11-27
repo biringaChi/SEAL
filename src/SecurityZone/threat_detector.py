@@ -1,3 +1,4 @@
+
 class ThreatDetector:
 	"""
 	This module defines the detection of In-band SQL threat patterns using a simple polymorphic technique.

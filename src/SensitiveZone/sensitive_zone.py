@@ -125,7 +125,7 @@ class DBManager(Sensitive):
             for row in conn.cursor().execute("SELECT users.Username, authorization.Privilege FROM users, authorization WHERE users.Trust = authorization.Trust"):
                 print(row)
 
-    def has_entergrades_secure(self, username) -> bool:
+    def has_entergrades_secure(self, username: str) -> bool:
         with connect(self.sensitive) as conn:
             cur = conn.cursor()
             cur.execute("SELECT Trust FROM users WHERE username = ?", (username,))
@@ -134,7 +134,7 @@ class DBManager(Sensitive):
             return ValueError("User doesn't exist!").__repr__()
         return True if trust_level[0] == "T2" else False
 
-    def has_entergrades_secure1(self, username) -> Union[None, bool]:
+    def has_entergrades_secure1(self, username: str) -> Union[None, bool]:
         with connect(self.sensitive) as conn:
             cur = conn.cursor()
             cur.execute("SELECT Trust FROM users WHERE username = ?", (username,))
