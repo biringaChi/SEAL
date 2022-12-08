@@ -1,5 +1,11 @@
-### SEAL
+<h1 align="center">SEAL</h1>
+
+<p align="center">
+  <img src="doc/ui.png" width="350">
+</p>
+
 Official Implementation of [A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks](https://arxiv.org/abs/2210.12877). The 15th IEEE International Conference on Security of Information and Networks (SIN'22).
+
 
 Abstract
 > Software weaknesses that create attack surfaces for adversarial exploits, such as lateral SQL injection (LSQLi) attacks, are usually introduced during the design phase of software development. Security design patterns are sometimes applied to tackle these weaknesses. However, due to the stealthy nature of lateral-based attacks, employing traditional security patterns to address these threats is insufficient. Hence, we present SEAL, a secure design that extrapolates architectural, design, and
@@ -12,12 +18,11 @@ To cite
 }
 ```
 
-Disclaimer
+Research Ethics:
 > Lateral-Injection attack strategies employed in this work are strictly for research purposes.
 
 Installation
 ```
-$ pip install -r requirements.txt
 $ git clone https://github.com/biringaChi/SEAL
 ```
 
@@ -25,6 +30,7 @@ Running **SEAL**
 ```
 $ cd src
 $ python main.py
+$ cd src; python main.py
 ```
 Cases: Enter *input* below in the *entry field* and click *inject*
 
