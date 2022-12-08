@@ -1,7 +1,7 @@
 <h1 align="center">SEAL</h1>
 
 <p align="center">
-  <img src="doc/ui.png" width="350">
+  <img src="doc/ui.png" width="400">
 </p>
 
 Official Implementation of [A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks](https://arxiv.org/abs/2210.12877). The 15th IEEE International Conference on Security of Information and Networks (SIN'22).
@@ -30,7 +30,6 @@ Running **SEAL**
 ```
 $ cd src
 $ python main.py
-$ cd src; python main.py
 ```
 Cases: Enter *input* below in the *entry field* and click *inject*
 
