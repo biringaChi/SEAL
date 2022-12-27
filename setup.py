@@ -9,7 +9,7 @@ def reader(root: str, file: str) -> List:
 setup(
 	name = "SEAL",
 	description = "A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks",
-	license = "GNU GENERAL PUBLIC LICENSE Version 3",
+	license = "MIT License",
 	author = "Chidera 'Chi' Biringa",
 	author_email = "biringachidera@gmail.com",
 	url = "https://github.com/biringaChi/SEAL",
