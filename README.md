@@ -1,8 +1,11 @@
-<h1 align="center">SEAL</h1>
+<h3 align = "center"> SEAL: A Secure Design Pattern Approach Toward Tackling Lateral-Injection Attacks </h3>
 
-<p align="center">
-  <img src="..doc/ui.png" width="400">
-</p>
+---
+
+<p align = "center"> <img src = "..doc/ui.png" width = "400"> </p>
+
+<h2 align = "center"> Core Design </h2>
+<p align="center"> <img src="..doc/core.png" width="98%"> </p>
 
 ---
 
@@ -10,6 +13,10 @@ Official Implementation of [A Secure Design Pattern Approach Toward Tackling Lat
 
 Abstract
 > Software weaknesses that create attack surfaces for adversarial exploits, such as lateral SQL injection (LSQLi) attacks, are usually introduced during the design phase of software development. Security design patterns are sometimes applied to tackle these weaknesses. However, due to the stealthy nature of lateral-based attacks, employing traditional security patterns to address these threats is insufficient. Hence, we present SEAL, a secure design that extrapolates architectural, design, and implementation abstraction levels to delegate security strategies toward tackling LSQLi attacks. We evaluated SEAL using case study software, where we assumed the role of an adversary and injected several attack vectors tasked with compromising the confidentiality and integrity of its database. Our evaluation of SEAL demonstrated its capacity to address LSQLi attacks.
+
+<hr>
+Artifact Author: Chidera Biringa
+<hr>
 
 Cite
 ```
