@@ -4,7 +4,7 @@
 
 <p align = "center"> <img src = "..doc/ui.png" width = "400"> </p>
 
-<h2 align = "center"> Core Design </h2>
+<h2 align = "center"> Core Secure Design </h2>
 <p align="center"> <img src="..doc/core.png" width="98%"> </p>
 
 ---
